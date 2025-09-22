@@ -1,0 +1,104 @@
+.react-calendar__navigation {
+  display: flex;
+  height: 48px;
+  margin-bottom: 0;
+  color: #fff;
+  align-items: center;
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 1px 4px rgba(60, 60, 120, 0.08);
+}
+
+.react-calendar__navigation button {
+  min-width: 32px;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #fff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.react-calendar__navigation button:hover {
+  background: rgba(255,255,255,0.13);
+  color: #fbbf24;
+}
+.react-calendar__navigation button:disabled {
+  background: none;
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+.react-calendar__navigation__label {
+  font-weight: bold;
+  flex-grow: 1 !important;
+  color: #fff;
+  pointer-events: none;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.95em;
+  color: #6366f1;
+  background: #f1f5f9;
+  padding: 0.6em 0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 2px rgba(60, 60, 120, 0.04);
+}
+
+/* CSS cho từng ô ngày trong tuần (thứ) */
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em; /* Padding cho từng chữ cái ngày */
+}
+
+/* Ghi đè style cho các ô ngày */
+.react-calendar__tile {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  text-align: center;
+  line-height: 1;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #212529;
+  border-radius: 6px;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  box-sizing: border-box;
+}
+/* Các ngày của tháng trước/sau */
+.react-calendar__tile--neighboringMonth {
+  color: #adb5bd; /* Màu xám nhạt hơn */
+}
+
+/* Ngày hôm nay */
+.react-calendar__tile--now {
+  background: #e9ecef; /* Màu nền cho ngày hôm nay */
+  font-weight: bold;
+  color: #212529; /* Màu chữ cho ngày hôm nay */
+}
+
+/* Khi hover vào một ngày */
+.react-calendar__tile:hover {
+  background-color: #dee2e6;
+}
+
+/* Ngày đang được chọn (active) */
+.react-calendar__tile--active {
+  background: #28a745; /* Màu xanh lá cây (ví dụ: Bootstrap's btn-success) */
+  color: white;
+  border-radius: 6px; /* Giữ hình vuông bo nhẹ */
+  font-weight: bold;
+}
+
+.react-calendar__tile--active:hover {
+  background: #218838; /* Màu xanh lá cây đậm hơn khi hover */
+}
+/* ...existing code... */

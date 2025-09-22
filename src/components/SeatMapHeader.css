@@ -1,0 +1,51 @@
+/* SeatMapHeader.css - Modernized and improved */
+.seat-map-header {
+  background: linear-gradient(90deg, #f8fafc 0%, #e0e7ff 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(60, 60, 120, 0.08);
+  padding: 18px 28px 12px 28px;
+  margin-bottom: 1.5rem;
+}
+
+.color-legend {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.color-legend .legend-item {
+  display: inline-block;
+  width: 36px;
+  height: 14px;
+  border-radius: 6px;
+  border: 1.5px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.info-bar {
+  background: rgba(255,255,255,0.85);
+  border: 1.5px solid #c7d2fe;
+  border-radius: 10px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  color: #2d3748;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  box-shadow: 0 1px 4px rgba(60, 60, 120, 0.06);
+}
+
+.driver-info, .stats-info {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.info-bar .red-text {
+  color: #e11d48;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

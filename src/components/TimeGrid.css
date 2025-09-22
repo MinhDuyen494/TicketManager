@@ -1,0 +1,107 @@
+/* TimeGrid.css - Modernized and improved */
+.time-grid-container {
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg, #f1f5f9 0%, #e0e7ff 100%);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(60, 60, 120, 0.08);
+  padding: 1.5rem 2rem;
+}
+
+.time-slot {
+  border: 1.5px solid #c7d2fe;
+  border-radius: 8px;
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 0.7rem;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.05rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(60, 60, 120, 0.04);
+}
+.time-slot:hover {
+  border-color: #6366f1;
+  background: #f0f9ff;
+  box-shadow: 0 4px 16px rgba(60, 60, 120, 0.13);
+}
+.time-slot-time {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e11d48;
+  letter-spacing: 0.5px;
+}
+.time-slot-info {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: white-space 0.2s, overflow 0.2s, text-overflow 0.2s;
+}
+
+.time-slot:hover .time-slot-info,
+.time-slot:focus .time-slot-info {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+
+/* Trạng thái AVAILABLE */
+.time-slot.status-available {
+  background-color: #e6f7f0; /* Màu xanh lá cây rất nhạt */
+}
+
+.time-slot.status-available .time-slot-time {
+  color: #dc3545; /* Giờ màu đỏ */
+}
+.time-slot.status-available .time-slot-info {
+
+  color: #6c757d; /* Info màu xám */
+}
+
+/* Trạng thái FULL */
+.time-slot.status-full {
+  background-color: #ffebee; /* Màu đỏ/hồng rất nhạt */
+  cursor: not-allowed;
+}
+
+.time-slot.status-full .time-slot-time {
+  color: #dc3545; /* Giờ màu đỏ */
+}
+.time-slot.status-full .time-slot-info {
+  color: #dc3545; /* Info cũng màu đỏ */
+}
+
+/* Trạng thái SELECTED */
+.time-slot.status-selected {
+  background-color: #198754; /* Màu xanh lá cây đậm (Bootstrap's success color) */
+  color: white;
+  border-color: #198754; /* Viền cùng màu với nền */
+}
+
+.time-slot.status-selected .time-slot-time,
+.time-slot.status-selected .time-slot-info {
+  color: white; /* Chữ màu trắng */
+}
+
+/* Tùy chỉnh khi hover cho từng trạng thái nếu cần */
+.time-slot.status-available:hover {
+  background-color: #d1f0e1; /* Hơi đậm hơn khi hover */
+}
+.time-slot.status-full:hover {
+ /* Có thể không cần thay đổi nhiều cho full khi hover vì nó đã bị vô hiệu hóa */
+  background-color: #ffdde0;
+}
+.time-slot.status-selected:hover {
+  background-color: #157347; /* Hơi đậm hơn khi hover */
+  border-color: #157347;
+}
